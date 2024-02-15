@@ -1,0 +1,9 @@
+# Generated dirs
+dist
+.npmrc
+# Node dependencies
+node_modules
+
+# System files
+*.log
+
