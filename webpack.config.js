@@ -17,20 +17,12 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            plugins: ["react-hot-loader/babel"],
-          },
-        },
+        use: 'babel-loader',
       },
       {
         test: /\.css$/,
         exclude: /(node_modules)/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-        ],
+        use: ['style-loader', 'css-loader'],
       },
     ]
   },
@@ -39,10 +31,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
-  ],
-  presets: [
-    ['@babel/preset-env', {targets: {node: 'current'}}],
-    '@babel/preset-typescript',
   ],
   devServer: {
     hot: true,
