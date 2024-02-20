@@ -1,5 +1,5 @@
 # Generated dirs
-dist
+public
 .npmrc
 # Node dependencies
 node_modules
